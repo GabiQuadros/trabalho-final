@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina de login</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div id="login">
+      <form class="card" id="login-form">
+        <div class="card-header">
+          <h2>Login</h2>
+        </div>
+
+        <div class="card-content">
+          <div class="card-content-area">
+            <label for="usuario">Usuário</label>
+
+            <input type="text" id="usuario-input" autocomplete="off" />
+          </div>
+
+          <div class="card-content-area">
+            <label for="password">Senha</label>
+
+            <input type="password" id="password-input" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <button class="submit" id="btnlogin">Entrar</button>
+
+          <p style="text-align: center;" 
+          ><a href="2create.html" class="criar-senha" >
+            Ainda não tem conta?<span
+              ><a style="color: blue;" href="2create.html" class="criar-senha" id="createLogin">
+                Criar conta</a
+              ></span
+            >
+          </p>
+        </div>
+      </form>
+    </div>
+    <script src="./js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: url(../images/home.png);
+  width: 100vw;
+}
+header {
+  border-bottom: 1px solid #060606;
+  padding: 5px;
+  color: #ffffff;
+  font-size: 20px;
+}
+#description-input {
+  width: 20vw;
+  margin: 5px;
+  padding: 10px;
+  background-color: #9e9899;
+  opacity: 0.9;
+}
+#detal-input {
+  width: 65vw;
+  padding: 10px;
+  background-color: #9e9899;
+  opacity: 0.9;
+}
+
+#custom {
+  background: rgba(245, 240, 240, 0.3);
+  border-radius: 20px 20px 0px 0px;
+  padding: 20px 0px 0px;
+  margin: 50px 50px 50px 70px;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90vw;
+}
+#custom td,
+#custom th {
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+#custom:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#custom tr:hover {
+  background-color: #ddd;
+}
+
+#custom th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #5f5a5a;
+  color: white;
+}
+
+#btnsalvar {
+  border-radius: 2px;
+  border: 2px solid #06e32e;
+  background-color: #06e32e;
+  color: #ffffff;
+  cursor: pointer;
+}
+#btneditar {
+  border-radius: 2px;
+  border: 2px solid #06e32e;
+  background-color: #06e32e;
+  color: #ffffff;
+  cursor: pointer;
+}
+#btnapagar {
+  border-radius: 2px;
+  border: 2px solid #f60606;
+  background-color: #f60606;
+  color: #ffffff;
+  cursor: pointer;
+}

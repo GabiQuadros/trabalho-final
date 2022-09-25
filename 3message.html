@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recados</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Meus recados</h1>
+      <form id="input-recados">
+        <input
+          id="description-input"
+          type="text"
+          placeholder="Descrição"
+          autocomplete="off"
+        />
+        <input
+          id="detal-input"
+          type="text"
+          placeholder="Detalhamento"
+          autocomplete="off"
+        />
+        <input type="submit" value="salvar" class="submit" id="btnsalvar" />
+      </form>
+    </header>
+    <div class="container">
+      <table id="custom">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th id="">Descrição</th>
+            <th id="">Detalhamento</th>
+            <th id="">Ação</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <!--<tr>
+            <td>001</td>
+            <td>xxxxxx</td>
+            <td>xxxxxx</td>
+            <td>
+              <input
+                type="submit"
+                value="apagar"
+                class="submit"
+                id="btnapagar"
+              />
+              <input
+                type="submit"
+                value="editar"
+                class="submit"
+                id="btneditar"
+              />
+            </td>
+          </tr>-->
+        </tbody>
+      </table>
+    </div>
+    <script src="./js/recado.js"></script>
+  </body>
+</html>
