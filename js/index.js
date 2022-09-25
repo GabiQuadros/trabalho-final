@@ -16,7 +16,7 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     recados: [],
   });
   alert("Conta criada com sucesso!");
-  window.location.href = "1login.html";
+  window.location.href = "index.html";
 });
 function saveAccount(data) {
   localStorage.setItem(data.login, JSON.stringify(data));

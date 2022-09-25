@@ -16,7 +16,7 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
       return;
     }
     saveData(account.login);
-    window.location.href = "3message.html";
+    window.location.href = "message.html";
   }
 });
 

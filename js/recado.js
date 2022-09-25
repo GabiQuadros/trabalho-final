@@ -8,7 +8,7 @@ const email = localStorage.getItem("data");
 const usuarioLogado = localStorage.getItem("email");
 if (!email) {
   alert("Faça login");
-  window.location.href = "1login.html";
+  window.location.href = "index.html";
 }
 
 window.addEventListener("load", getRecados);
