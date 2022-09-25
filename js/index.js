@@ -1,24 +1,32 @@
-//criar conta
-document.getElementById("create-form").addEventListener("submit", function (e) {
+//Logar no sistema
+document.getElementById("login-form").addEventListener("submit", function (e) {
   e.preventDefault();
-  alert("Anote sua senha em local seguro, não será possivel recupera-la!");
+  const email = document.getElementById("usuario-input").value;
+  const password = document.getElementById("password-input").value;
 
-  const email = document.getElementById("user").value;
-  const password = document.getElementById("password").value;
-  console.log(email, password);
-  // if (password !== password) {
-  //   alert("As senhas não coincidem! Tente novamente!");
-  // return;
-  // }
-  saveAccount({
-    login: email,
-    password: password,
-    recados: [],
-  });
-  alert("Conta criada com sucesso!");
-  window.location.href = "index.html";
+  const account = getAccount(email);
+
+  if (!account) {
+    alert("Verifique seu e-mail ou senha!");
+    return;
+  }
+  if (account) {
+    if (account.password !== password) {
+      alert("Verifique seu e-mail ou senha!");
+      return;
+    }
+    saveData(account.login);
+    window.location.href = "message.html";
+  }
 });
-function saveAccount(data) {
-  localStorage.setItem(data.login, JSON.stringify(data));
+
+function getAccount(key) {
+  const account = localStorage.getItem(key);
+  if (account) {
+    return JSON.parse(account);
+  }
+  return "";
 }
-/////////
+function saveData(email) {
+  localStorage.setItem("data", email);
+}
