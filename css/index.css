@@ -89,3 +89,7 @@ body {
   color: #030303;
   text-align: center;
 }
+input::placeholder {
+  color: rgb(58, 54, 54);
+  opacity: 0.8;
+}

@@ -7,6 +7,15 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
   const passwordconfirm = document.getElementById("passwordrepeat").value;
   console.log(email, password);
 
+  if (email.length < 6) {
+    alert("Insira um e-mail vállido");
+    return;
+  }
+  if (password.length < 4) {
+    alert("A senha precisa ter 4 dígitos");
+    return;
+  }
+
   if (passwordconfirm !== password) {
     alert("As senhas não coincidem! Tente novamente!");
     return;
