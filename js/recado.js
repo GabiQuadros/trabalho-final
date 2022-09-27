@@ -1,7 +1,6 @@
 //criar recado
 let form = document.getElementById("tbody");
-const description = document.getElementById("description-input");
-const detailing = document.getElementById("detal-input");
+
 const email = localStorage.getItem("data");
 
 //Verificar se tem usuário logado
@@ -19,6 +18,18 @@ document
     e.preventDefault();
 
     const user = JSON.parse(localStorage.getItem(email));
+    const description = document.getElementById("description-input");
+    console.log(description);
+    const detailing = document.getElementById("detal-input");
+
+    if (!description || description.length < 3) {
+      alert("Descrição inválida, mínimo de 3 caracteres! ");
+      return;
+    }
+    if (!detailing || detailing.length < 3) {
+      alert("Descrição inválida");
+      return;
+    }
 
     user.recados.push({
       id: Math.floor(Date.now() / 1000),
@@ -27,11 +38,11 @@ document
     });
     localStorage.setItem(email, JSON.stringify(user));
 
-    alert("Recado adicionado com sussesso!");
     //limpar input de cadastro
     description.value = "";
     detailing.value = "";
     getRecados();
+    alert("Recado adicionado com sussesso!");
   });
 
 //lançar recado na pagina
@@ -40,6 +51,7 @@ function getRecados() {
   //console.log(usuario);
   form.innerHTML = ``;
   let numero = 1;
+
   for (const recad of usuario.recados) {
     form.innerHTML += `
   <tr>
@@ -74,12 +86,27 @@ function editarRecado(id) {
   const recadoEditado = usuario.recados.findIndex(
     (recados) => recados.id === id
   );
-  usuario.recados[recadoEditado].description =
-    prompt("Digite a nova descrição!") ||
-    usuario.recados[recadoEditado].description;
+  let description = prompt(
+    `Digite a nova descrição!`,
+    `${usuario.recados[recadoEditado].description}`
+  );
+  if (!description || description.length < 3) {
+    alert("Descrição inválida, mínimo de 3 caracteres!");
+    return;
+  }
 
-  usuario.recados[recadoEditado].detailing =
-    prompt("Edite o detalhamento!") || usuario.recados[recadoEditado].detailing;
+  let detailing = prompt(
+    `Digite a nova descrição!`,
+    `${usuario.recados[recadoEditado].detailing}`
+  );
+
+  if (!detailing || detailing.length < 3) {
+    alert("Descrição inválida");
+    return;
+  }
+  usuario.recados[recadoEditado].description = description;
+  usuario.recados[recadoEditado].detailing = detailing;
+
   localStorage.setItem(email, JSON.stringify(usuario));
   getRecados();
 }
