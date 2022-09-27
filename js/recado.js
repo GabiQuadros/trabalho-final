@@ -1,7 +1,10 @@
 //criar recado
 let form = document.getElementById("tbody");
-
 const email = localStorage.getItem("data");
+
+document.getElementById("btnsair").addEventListener("click", function () {
+  window.location.href = "index.html";
+});
 
 //Verificar se tem usuário logado
 const usuarioLogado = localStorage.getItem("email");

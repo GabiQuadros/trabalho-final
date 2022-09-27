@@ -58,6 +58,15 @@ header {
   color: white;
 }
 
+#btnsair {
+  border-radius: 2px;
+  border: 2px solid #bb1111;
+  background-color: #bb1111;
+  color: #030303;
+  cursor: pointer;
+  padding: 5px;
+  width: 5%;
+}
 #btnsalvar {
   border-radius: 2px;
   border: 2px solid #06e32e;
