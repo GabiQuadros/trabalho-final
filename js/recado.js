@@ -23,7 +23,7 @@ document
     const detailing = document.getElementById("detal-input");
 
     if (!description || description.length < 3) {
-      alert("Descrição inválida, mínimo de 3 caracteres! ");
+      alert("Descrição inválida, mínimo de 3 caracteres!");
       return;
     }
     if (!detailing || detailing.length < 3) {
@@ -101,7 +101,7 @@ function editarRecado(id) {
   );
 
   if (!detailing || detailing.length < 3) {
-    alert("Descrição inválida");
+    alert("Detalhamento inválido,  mínimo de 3 caracteres!");
     return;
   }
   usuario.recados[recadoEditado].description = description;
