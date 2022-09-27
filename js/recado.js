@@ -70,13 +70,16 @@ function apagarRecado(id) {
 //editar recado
 function editarRecado(id) {
   const usuario = JSON.parse(localStorage.getItem(email));
+
   const recadoEditado = usuario.recados.findIndex(
     (recados) => recados.id === id
   );
-  usuario.recados[recadoEditado].description = prompt(
-    "Digite a nova descrição!"
-  );
-  usuario.recados[recadoEditado].detailing = prompt("Edite o detalhamento!");
+  usuario.recados[recadoEditado].description =
+    prompt("Digite a nova descrição!") ||
+    usuario.recados[recadoEditado].description;
+
+  usuario.recados[recadoEditado].detailing =
+    prompt("Edite o detalhamento!") || usuario.recados[recadoEditado].detailing;
   localStorage.setItem(email, JSON.stringify(usuario));
   getRecados();
 }
