@@ -10,6 +10,13 @@ header {
   color: #ffffff;
   font-size: 20px;
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 #description-input {
   width: 20vw;
   margin: 5px;
@@ -64,8 +71,9 @@ header {
   background-color: #bb1111;
   color: #030303;
   cursor: pointer;
+  margin: 50px;
   padding: 5px;
-  width: 5%;
+  width: 70px;
 }
 #btnsalvar {
   border-radius: 2px;
@@ -73,6 +81,7 @@ header {
   background-color: #06e32e;
   color: #ffffff;
   cursor: pointer;
+  padding: 8px;
 }
 #btneditar {
   border-radius: 2px;
